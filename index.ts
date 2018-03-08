@@ -21,3 +21,26 @@ let userAddress : Address = {
     city: 'Radzionków',
     street: 'Hasiok 10'
 }
+export type NumOrString = number | string
+let numOrString: NumOrString;
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+interface SystemUser {
+    login: string;
+}
+
+type CustomUser = Person & SystemUser;
+
+numOrString = 'asdsa'
+
+interface SuperUser extends Person, SystemUser {
+    address: Address
+}
+
+function test2(value: NumOrString) {
+    
+}
