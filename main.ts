@@ -1,19 +1,25 @@
 import { Cart } from "./Cart";
+import { Product, FoodProduct, ElectronicProduct } from "./models";
+import { showProductDetails } from "./utils";
 
-let cart = new Cart();
-cart.addProduct({
+let electronicsCart = new Cart<ElectronicProduct>();
+let foodsCart = new Cart<FoodProduct>();
+electronicsCart.addProduct({
     price: 10,
     description: 'product descr 1',
-    title: 'Product 1',
-    id: 1
+    title: 'TV',
+    id: 1,
+    quantity: 10,
+    voltage: 230
 })
-
-let prod2 = {
-    price: 5,
-    description: 'product descr 2',
-    title: 'Product 2',
-    id: 2
-};
-cart.addProduct(prod2);
-
-console.log(cart.showProducts());
+foodsCart.addProduct({
+    price: 10,
+    description: 'product descr 1',
+    title: 'Tomato',
+    id: 1,
+    quantity: 5,
+    weight: 3
+})
+console.log(foodsCart.showProducts());
+console.log(showProductDetails(foodsCart.products[0]));
+console.log(showProductDetails(electronicsCart.products[0]))

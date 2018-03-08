@@ -16,3 +16,26 @@ var userAddress = {
     city: 'Radzionków',
     street: 'Hasiok 10'
 };
+var numOrString;
+numOrString = 'asdsa';
+function test2(value) {
+    if (typeof value === 'string') {
+    }
+    else {
+    }
+}
+function test3(val) {
+    if (val instanceof User_1.User) {
+    }
+    else {
+    }
+}
+function test4(val) {
+    if ('city' in val) {
+    }
+    else {
+    }
+}
+function isPerson(val) {
+    return val.name !== undefined;
+}

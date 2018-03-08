@@ -1,6 +1,7 @@
 import { User } from "./User";
 import { Address } from "./models/Address";
 import { Cart } from "./Cart";
+import { Product } from "./models";
 
 let num = 1;
 let str = 'test'
@@ -49,7 +50,7 @@ function test2(value: NumOrString) {
     }
 }
 
-function test3(val: User | Cart) {
+function test3(val: User | Cart<Product>) {
     if( val instanceof User) {
     } else {
     }
