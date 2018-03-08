@@ -1,5 +1,6 @@
 import { User } from "./User";
 import { Address } from "./models/Address";
+import { Cart } from "./Cart";
 
 let num = 1;
 let str = 'test'
@@ -42,5 +43,25 @@ interface SuperUser extends Person, SystemUser {
 }
 
 function test2(value: NumOrString) {
-    
+    if (typeof value === 'string') {
+        
+    } else {
+    }
 }
+
+function test3(val: User | Cart) {
+    if( val instanceof User) {
+    } else {
+    }
+}
+
+function test4(val: Address | Person) {
+    if ('city' in val) {
+    } else {
+    }
+}
+
+function isPerson (val: Person | SystemUser): val is Person{
+    return (<Person>val).name !== undefined;
+}
+
