@@ -1,3 +1,6 @@
+import { User } from "./User";
+import { Address } from "./models/Address";
+
 let num = 1;
 let str = 'test'
 let bool = false;
@@ -10,24 +13,11 @@ function testfn(num: number):never {
     throw new Error();
 }
 
-class User {
-    private _name: string;
-    constructor(newName: string) {
-        this._name = newName;
-    }
+let user:User = new User('Alojzy');
+console.log(user.getHelloName());
 
-    get name() {
-        return this._name;
-    }
 
-    set name(newName: string) {
-        this._name = newName;
-    }
-
-    getHelloName(): string {
-        return 'hello '+ this.name;
-    }
+let userAddress : Address = {
+    city: 'Radzionków',
+    street: 'Hasiok 10'
 }
-
-let user = new User('Alojzy');
-console.log(user.getHelloName);
