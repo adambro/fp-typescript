@@ -1,18 +1,19 @@
 import { Product } from './models/Product';
+import { ICart } from './interfaces/ICart';
 
-export class Cart {
-    private _products: Product[] = [];
-    private _total: number = 0;
+export class Cart<T extends Product> implements ICart<T> {
+    products: T[] = [];
+    total: number = 0;
 
-    addProduct(product: Product) {
-        this._products.push(product);
-        this._total += product.price;
+    addProduct(product: T) {
+        this.products.push(product);
+        this.total += product.price;
     }
 
     showProducts(): string {
         let productsSummary = 
-        this._products.map(p=> p.title).join(', ')
+        this.products.map(p=> p.title).join(', ')
         return `Products: ${productsSummary}
-        Total price: ${this._total}`
+        Total price: ${this.total}`
     }
 }
