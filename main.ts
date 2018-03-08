@@ -2,6 +2,10 @@ import { Cart } from "./Cart";
 import { Product, FoodProduct, ElectronicProduct } from "./models";
 import { showProductDetails } from "./utils";
 
+let elem: HTMLElement | null = document.querySelector('#container');
+if(elem) {
+elem.innerHTML="<span>asadsadsad<span>";
+}
 let electronicsCart = new Cart<ElectronicProduct>();
 let foodsCart = new Cart<FoodProduct>();
 electronicsCart.addProduct({
@@ -23,3 +27,5 @@ foodsCart.addProduct({
 console.log(foodsCart.showProducts());
 console.log(showProductDetails(foodsCart.products[0]));
 console.log(showProductDetails(electronicsCart.products[0]))
+
+
