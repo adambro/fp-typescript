@@ -1,8 +1,11 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
-    entry: './main.ts',
+    entry: { main: './main.ts',
+             libs: './index.ts' },
     output: {
         path: __dirname + '/dist',
-        filename: 'bundle.js'
+        filename: '[hash].[name].bundle.js'
     },
     resolve: {
         extensions: ['.ts', '.js']
@@ -14,5 +17,8 @@ module.exports = {
                 loader: 'awesome-typescript-loader'
             }
         ] 
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin()
+    ]
 }

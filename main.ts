@@ -1,10 +1,14 @@
 import { Cart } from "./Cart";
 import { Product, FoodProduct, ElectronicProduct } from "./models";
 import { showProductDetails } from "./utils";
+import * as _ from 'lodash';
+
+var arr = [1,2,2,3,4,4,4];
+console.log(_.uniq(arr));
 
 let elem: HTMLElement | null = document.querySelector('#container');
 if(elem) {
-elem.innerHTML="<span>asadsadsad<span>";
+   elem.innerHTML="<span>asadsadsad<span>";
 }
 let electronicsCart = new Cart<ElectronicProduct>();
 let foodsCart = new Cart<FoodProduct>();
