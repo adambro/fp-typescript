@@ -1,0 +1,22 @@
+{
+  "name": "fp-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbrzoska/fp-typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbrzoska/fp-typescript/issues"
+  },
+  "homepage": "https://github.com/rbrzoska/fp-typescript#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
