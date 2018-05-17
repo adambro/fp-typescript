@@ -36,12 +36,14 @@ const cart = new Cart();
 const p1: Product = {
     title: 'Kubek',
     price: 10,
-    description: 'Z kotami'
+    description: 'Z kotami',
+    quantity: 1
 }
 const p2: Product = {
     title: 'Szolka',
     price: 40,
-    description: 'Bez kotow'
+    description: 'Bez kotow',
+    quantity: 2
 }
 
 cart.addProduct(p1)

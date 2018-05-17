@@ -1,12 +1,12 @@
 import { Product } from './Product';
 
-export class Cart {
-    private products: Product[] = [];
+export class Cart<T extends Product> {
+    private products: T[] = [];
     private sum: number = 0;
 
-    addProduct(product: Product) {
+    addProduct(product: T) {
         this.products.push(product);
-        this.sum += product.price;
+        this.sum += (product.price * product.quantity);
     }
 
     showProducts() {
